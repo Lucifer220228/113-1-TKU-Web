@@ -35,3 +35,4 @@ async function main() {
         console.error("發生錯誤：", error);
     }
 }
+main()
