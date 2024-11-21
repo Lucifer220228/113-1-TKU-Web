@@ -23,14 +23,12 @@ async function main() {
             console.log(student);
         });
 
-        const pipeline = [
-            {
+        const pipeline = {
               $group: {
                 _id: "$院系", 
                 total: { $sum: 1 } 
               }
-            },
-          ];
+            };
       
           const result = await collection.aggregate(pipeline).toArray();
           console.log(result);
